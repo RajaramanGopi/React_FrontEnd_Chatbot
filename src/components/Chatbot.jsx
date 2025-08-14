@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-const API_URL = 'http://127.0.0.1:8000/chat'; // Change to your FastAPI backend URL if needed
+const API_URL = 'http://127.0.0.1:8000/chat';
 
 export default function Chatbot() {
   const [messages, setMessages] = useState([
@@ -25,8 +25,9 @@ export default function Chatbot() {
       const res = await fetch(API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: input })
+        body: JSON.stringify({ message: userMsg.text })
       });
+      if (!res.ok) throw new Error('Network error');
       const data = await res.json();
       setMessages((msgs) => [...msgs, { sender: 'bot', text: data.response }]);
     } catch (err) {
