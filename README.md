@@ -2,6 +2,8 @@
 
 This is a modern, Netflix-inspired chatbot UI built with React and Vite. It connects to your FastAPI backend at `/chat` for AI chat functionality.
 
+sample
+
 ## Features
 - Beautiful, responsive Netflix-style design
 - Chatbot interface with message history
