@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-const API_URL = 'http://127.0.0.1:8000/chat'; // Change to your FastAPI backend URL if needed
+// Set this to your FastAPI backend URL in Codespaces, e.g.:
+// const API_URL = 'https://<your-codespace-id>-8000.app.github.dev/chat';
+const API_URL = 'https://<your-codespace-id>-8000.app.github.dev/chat'; // Update <your-codespace-id> accordingly
 
 export default function Chatbot() {
   const [messages, setMessages] = useState([
