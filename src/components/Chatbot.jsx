@@ -1,9 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-// Use the Codespace public URL for backend API:
-const API_URL = 'http://localhost:5173/-8000.app.github.dev/chat';
-// If running in Codespaces and exposing port 8000, use:
-// const API_URL = 'https://<your-codespace-id>-8000.app.github.dev/chat';
+// Use the actual forwarded backend URL from the PORTS tab!
+const API_URL = 'https://refactored-space-spoon-69r97w5wv7x9f5p6r-8000.app.github.dev/chat';
 
 export default function Chatbot() {
   const [messages, setMessages] = useState([
